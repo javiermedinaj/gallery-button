@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import { FaArrowLeft, FaArrowRight, FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import Slide from './Slide';
 import SwiperLib from 'swiper';
 import Splitting from 'splitting';
@@ -13,7 +13,16 @@ import Image5 from '../assets/images/05.jpg';
 import Image6 from '../assets/images/06.jpg';
 
 const CustomSwiper = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
     const sliderText = document.querySelectorAll('.swiper-slide_text');
     const sliderFigure = document.querySelector('.swiper-slide_figure');
     const arrowNext = document.querySelector('.swiper-button-next');
@@ -101,6 +110,10 @@ const CustomSwiper = () => {
       init();
       addEventListeners();
     };
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -113,8 +126,13 @@ const CustomSwiper = () => {
         <Slide text1="a shaman" text2="leading the tribe" imgSrc={Image5} />
         <Slide text1="Through the haze" text2="of smoke and sweat" imgSrc={Image6} />
       </div>
-      <div className="swiper-button-prev"><FaArrowLeft /></div>
-      <div className="swiper-button-next"><FaArrowRight /></div>
+      <div className="swiper-button-prev">
+        {isMobile ? <FaArrowUp /> : <FaArrowLeft />}
+      </div>
+      <div className="swiper-button-next">
+        {isMobile ? <FaArrowDown /> : <FaArrowRight />}
+      </div>
+      {isMobile && <div className="scroll-message">Scrollea para cambiar de imagen</div>}
     </section>
   );
 };

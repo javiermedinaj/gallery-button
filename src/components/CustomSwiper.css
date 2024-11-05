@@ -45,25 +45,49 @@
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     opacity: 0.5;
-    transition: opacity 0.12s ease-in-out;
+    transition: opacity 0.32s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
     .swiper-slide_figure {
-      width: 100rem; 
-      height: 60rem; 
+        width: 100rem; 
+        height: 60rem; 
     }
-
     .swiper {
         position: relative;
         overflow: hidden;
         width: 100%;
         height: 80vh;
     }
-  
     .swiper-button-next,
     .swiper-button-prev {
-      color: #fff;
-      font-size: 4.5rem; 
+        color: #fff;
+        font-size: 2.5rem; 
+        top: auto;
+        bottom: 10px;
+        transform: translateX(-50%);
+    }
+
+    .swiper-button-next {
+        right: auto;
+        left: 50%;
+        top: 70%; 
+       }
+
+    .swiper-button-prev {
+        left: 50%;
+        bottom: 50px;
+        top: 30%;
+    }
+
+    .scroll-message {
+        position: absolute;
+        top: 25%;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 1rem;
+        z-index: 1000;
     }
 }
