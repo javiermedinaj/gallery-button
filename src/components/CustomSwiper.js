@@ -6,6 +6,14 @@ import Splitting from 'splitting';
 import gsap from 'gsap';
 import './CustomSwiper.css';
 
+// Importar las imágenes
+import Image1 from '../assets/images/01.jpg';
+import Image2 from '../assets/images/02.jpg';
+import Image3 from '../assets/images/03.jpg';
+import Image4 from '../assets/images/04.jpg';
+import Image5 from '../assets/images/05.jpg';
+import Image6 from '../assets/images/06.jpg';
+
 const CustomSwiper = () => {
   useEffect(() => {
     const sliderText = document.querySelectorAll('.swiper-slide_text');
@@ -100,12 +108,12 @@ const CustomSwiper = () => {
   return (
     <section className="swiper">
       <div className="swiper-wrapper">
-        <Slide text1="The pulsating" text2="beats of the music" imgSrc="./images/01.jpg" />
-        <Slide text1="People from" text2="all walks of life" imgSrc="./images/02.jpg" />
-        <Slide text1="a gateway" text2="to escape reality" imgSrc="./images/03.jpg" />
-        <Slide text1="a form of expression" text2="a visual representation" imgSrc="./images/04.jpg" />
-        <Slide text1="a shaman" text2="leading the tribe" imgSrc="./images/05.jpg" />
-        <Slide text1="Through the haze" text2="of smoke and sweat" imgSrc="./images/06.jpg" />
+        <Slide text1="The pulsating" text2="beats of the music" imgSrc={Image1} />
+        <Slide text1="People from" text2="all walks of life" imgSrc={Image2} />
+        <Slide text1="a gateway" text2="to escape reality" imgSrc={Image3} />
+        <Slide text1="a form of expression" text2="a visual representation" imgSrc={Image4} />
+        <Slide text1="a shaman" text2="leading the tribe" imgSrc={Image5} />
+        <Slide text1="Through the haze" text2="of smoke and sweat" imgSrc={Image6} />
       </div>
       <div className="swiper-button-prev"><FaArrowLeft /></div>
       <div className="swiper-button-next"><FaArrowRight /></div>

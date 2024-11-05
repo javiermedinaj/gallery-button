@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <Swiper />
+      <Swiper /> 
       <About />
     </div>
   );
