@@ -20,7 +20,7 @@ Este proyecto es una galería de imágenes con animaciones. Puedes usarlo y modi
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/tu-repositorio.git
+    git clone https://github.com/javiermedinaj/gallery-button
     ```
 2. Navega al directorio del proyecto:
     ```bash
