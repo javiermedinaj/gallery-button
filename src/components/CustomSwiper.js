@@ -5,8 +5,6 @@ import SwiperLib from 'swiper';
 import Splitting from 'splitting';
 import gsap from 'gsap';
 import './CustomSwiper.css';
-
-// Importar las imágenes
 import Image1 from '../assets/images/01.jpg';
 import Image2 from '../assets/images/02.jpg';
 import Image3 from '../assets/images/03.jpg';
@@ -24,7 +22,7 @@ const CustomSwiper = () => {
     let swiper = new SwiperLib('.swiper', {
       loop: true,
       direction: 'vertical',
-      allowTouchMove: false,
+      allowTouchMove: true, 
       parallax: true,
       speed: 1000,
     });
