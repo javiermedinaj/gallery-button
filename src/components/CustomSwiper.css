@@ -53,6 +53,13 @@
       width: 100rem; 
       height: 60rem; 
     }
+
+    .swiper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 80vh;
+    }
   
     .swiper-button-next,
     .swiper-button-prev {
