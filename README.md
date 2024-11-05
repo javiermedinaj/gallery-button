@@ -24,7 +24,7 @@ Este proyecto es una galería de imágenes con animaciones. Puedes usarlo y modi
     ```
 2. Navega al directorio del proyecto:
     ```bash
-    cd tu-repositorio
+    cd gallery-button
     ```
 3. Instalar dependecias con
     ```bash
